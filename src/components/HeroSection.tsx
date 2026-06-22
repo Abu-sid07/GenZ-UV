@@ -10,8 +10,8 @@ export default function HeroSection() {
       className="py-10 sm:py-16 lg:py-24 pt-28 sm:pt-32 lg:pt-36"
       style={{ 
         backgroundImage: isDark 
-          ? `linear-gradient(to right, rgba(5, 8, 22, 0.98), rgba(5, 8, 22, 0.85)), url(/bg-img2.jpeg)`
-          : `linear-gradient(to right, rgba(249, 250, 251, 0.98), rgba(249, 250, 251, 0.88)), url(/bg-img2.jpeg)`,
+          ? `linear-gradient(to right, rgba(5, 8, 22, 0.85), rgba(5, 8, 22, 0.7)), url(/bg-img2.jpeg)`
+          : `linear-gradient(to right, rgba(249, 250, 251, 0.88), rgba(249, 250, 251, 0.75)), url(/bg-img2.jpeg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
