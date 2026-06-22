@@ -7,7 +7,7 @@ export default function HeroSection() {
 
   return (
     <section className="py-10 sm:py-16 lg:py-24 pt-28 sm:pt-32 lg:pt-36 relative overflow-hidden">
-      {/* Background Image Layer */}
+      {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -17,17 +17,14 @@ export default function HeroSection() {
           backgroundRepeat: 'no-repeat',
         }}
       />
-      {/* Overlay Layer */}
+      {/* Dark Mode Overlay */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 transition-all duration-300"
         style={{
-          backgroundImage: isDark 
-            ? 'linear-gradient(to right, rgba(5, 8, 22, 0.85), rgba(5, 8, 22, 0.7))'
-            : 'linear-gradient(to right, rgba(249, 250, 251, 0.88), rgba(249, 250, 251, 0.75))',
-          transition: 'background-image 0.3s ease-in-out',
+          backgroundColor: isDark ? 'rgba(5, 8, 22, 0.75)' : 'rgba(249, 250, 251, 0.80)',
         }}
       />
-      {/* Content Layer */}
+      {/* Content */}
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           <p
