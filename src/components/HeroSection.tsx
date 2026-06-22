@@ -6,18 +6,29 @@ export default function HeroSection() {
   const isDark = theme === 'dark';
 
   return (
-    <section
-      className="py-10 sm:py-16 lg:py-24 pt-28 sm:pt-32 lg:pt-36"
-      style={{ 
-        backgroundImage: isDark 
-          ? `linear-gradient(to right, rgba(5, 8, 22, 0.85), rgba(5, 8, 22, 0.7)), url(/bg-img2.jpeg)`
-          : `linear-gradient(to right, rgba(249, 250, 251, 0.88), rgba(249, 250, 251, 0.75)), url(/bg-img2.jpeg)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 lg:py-24 pt-28 sm:pt-32 lg:pt-36 relative overflow-hidden">
+      {/* Background Image Layer */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/bg-img2.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      {/* Overlay Layer */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: isDark 
+            ? 'linear-gradient(to right, rgba(5, 8, 22, 0.85), rgba(5, 8, 22, 0.7))'
+            : 'linear-gradient(to right, rgba(249, 250, 251, 0.88), rgba(249, 250, 251, 0.75))',
+          transition: 'background-image 0.3s ease-in-out',
+        }}
+      />
+      {/* Content Layer */}
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           <p
             className="text-base font-semibold tracking-wider uppercase"
